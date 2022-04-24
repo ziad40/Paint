@@ -1,0 +1,51 @@
+body{
+    background-color: #ff71001a;
+  }
+    canvas{
+      border: 1px solid black;
+       width: 1000px;
+       height: 500px;
+       cursor: pointer;
+    }
+    button{
+      /* border-style: none; */
+      margin: 0.5px;
+      background-color: white;
+    }
+    .fle{
+      display: flex;
+
+    }
+    .but1{
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      margin: -2px;
+      border-style: none;
+    }
+    .COL{
+      margin: 0px;
+      padding: 0px;
+    }
+    .test{
+      margin: 0ps;
+      height: 20px;
+    }
+    nav{
+      width: 1000px;
+      display: flex;
+      justify-content:space-between;
+        background-color: #0088f4;
+    }
+    .sa{
+      margin-left: 70px;
+    }
+    .elli{
+      height: 25px;
+    }
+    .ell{
+        width: 17px;
+        height: 8px;
+        border: 1px black solid;
+    border-radius: 10px 10px;
+    }

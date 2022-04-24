@@ -1,0 +1,210 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+      <div>
+        <button (click)='Rectangle()' class="BUT">&#9645;</button>
+        <button (click)='Square()' class="BUT">&#9634;</button>
+       <button (click)='Circle()' class="BUT" >&#9711;</button>
+       <button (click)='Ellipse()' class="BUT" class="elli"> <div class="ell"></div> </button>
+       <button (click)='LineSegment()' class="BUT">&#8260;</button>
+       <button (click)='Triangle()' class="BUT">&#9651;</button>
+      </div>
+      <div>
+        <button (click)='select()' class="BUT" style="margin-left: 100px;">&#9994;</button>
+        <button (click)='delete2()' class="BUT">&#10006;</button>
+        <button (click)='resize()' class="BUT">&#10012;</button>
+        <button (click)='Move()' class="BUT">&#10149;</button>
+        <button (click)='Copy()'class="BUT">&#10063;</button>
+        <button (click)='clear()' class="BUT">&#10060;</button>
+        <button (click)='undo ()' class="BUT">&#10094;</button>
+        <button (click)='redo()' class="BUT">&#10095;</button>
+      </div>
+       <div>
+         <button  (click)=' save()' class="BUT" class="sa">&#9944;</button>
+         <button (click)='load()' class="BUT">&#9842;</button>
+         <button (click)='ReDraw()' class="BUT">&#9997;</button>
+       </div>
+
+     </nav>
+
+     <div class="fle">
+       <canvas class="Canvas" ></canvas>
+       <div class="COl" >
+          <div class="test">
+            <button class="but1" (click)='Color("#003366")' style="background-color: #003366;"></button>
+            <button class="but1" (click)='Color("#336699")' style="background-color: #336699;"></button>
+            <button class="but1" (click)='Color("#3366cc")' style="background-color: #3366cc;"></button>
+            <button class="but1" (click)='Color("#003399")' style="background-color: #003399;"></button>
+            <button class="but1" (click)='Color("#000099")' style="background-color: #000099;"></button>
+            <button class="but1" (click)='Color("#0000cc")' style="background-color: #0000cc;"></button>
+            <button class="but1" (click)='Color("#000066")' style="background-color: #000066;"></button>
+          </div>
+
+          <div class="test">
+            <button class="but1" (click)='Color("#006666")' style="background-color: #006666;"></button>
+            <button class="but1" (click)='Color("#006699")' style="background-color: #006699;"></button>
+            <button class="but1" (click)='Color("#0099cc")' style="background-color: #0099cc;"></button>
+            <button class="but1" (click)='Color("#0066cc")' style="background-color: #0066cc;"></button>
+            <button class="but1" (click)='Color("#0033cc")' style="background-color: #0033cc;"></button>
+            <button class="but1" (click)='Color("#0000ff")' style="background-color: #0000ff;"></button>
+            <button class="but1" (click)='Color("#3333ff")' style="background-color: #3333ff;"></button>
+            <button class="but1" (click)='Color("#333399")' style="background-color: #333399;"></button>
+          </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#669999")' style="background-color: #669999;"></button>
+             <button class="but1" (click)='Color("#009999")' style="background-color: #009999;"></button>
+             <button class="but1" (click)='Color("#33cccc")' style="background-color: #33cccc;"></button>
+             <button class="but1" (click)='Color("#00ccff")' style="background-color: #00ccff;"></button>
+             <button class="but1" (click)='Color("#0099ff")' style="background-color: #0099ff;"></button>
+             <button class="but1" (click)='Color("#0066ff")' style="background-color: #0066ff;"></button>
+             <button class="but1" (click)='Color("#3366ff")' style="background-color: #3366ff;"></button>
+             <button class="but1" (click)='Color("#3333cc")' style="background-color: #3333cc;"></button>
+             <button class="but1" (click)='Color("#666699")' style="background-color: #666699;"></button>
+           </div>
+
+            <div class="test">
+              <button class="but1" (click)='Color("#339966")' style="background-color: #339966;"></button>
+              <button class="but1" (click)='Color("#00cc99")' style="background-color: #00cc99;"></button>
+              <button class="but1" (click)='Color("#00ffcc")' style="background-color: #00ffcc;"></button>
+              <button class="but1" (click)='Color("#00ffff")' style="background-color: #00ffff;"></button>
+              <button class="but1" (click)='Color("#33ccff")' style="background-color: #33ccff;"></button>
+              <button class="but1" (click)='Color("#3399ff")' style="background-color: #3399ff;"></button>
+              <button class="but1" (click)='Color("#6699ff")' style="background-color: #6699ff;"></button>
+              <button class="but1" (click)='Color("#6666ff")' style="background-color: #6666ff;"></button>
+              <button class="but1" (click)='Color("#6600ff")' style="background-color: #6600ff;"></button>
+              <button class="but1" (click)='Color("#6600cc")' style="background-color: #6600cc;"></button>
+            </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#339933")' style="background-color: #339933;"></button>
+             <button class="but1" (click)='Color("#00cc66")' style="background-color: #00cc66;"></button>
+             <button class="but1" (click)='Color("#00ff99")' style="background-color: #00ff99;"></button>
+             <button class="but1" (click)='Color("#66ffcc")' style="background-color: #66ffcc;"></button>
+             <button class="but1" (click)='Color("#66ffff")' style="background-color: #66ffff;"></button>
+             <button class="but1" (click)='Color("#66ccff")' style="background-color: #66ccff;"></button>
+             <button class="but1" (click)='Color("#99ccff")' style="background-color: #99ccff;"></button>
+             <button class="but1" (click)='Color("#9999ff")' style="background-color: #9999ff;"></button>
+             <button class="but1" (click)='Color("#9966ff")' style="background-color: #9966ff;"></button>
+             <button class="but1" (click)='Color("#9933ff")' style="background-color: #9933ff;"></button>
+             <button class="but1" (click)='Color("#9900ff")' style="background-color: #9900ff;"></button>
+           </div>
+           <div class="test">
+             <button class="but1" (click)='Color("#006600")' style="background-color: #006600;"></button>
+             <button class="but1" (click)='Color("#00cc00")' style="background-color: #00cc00;"></button>
+             <button class="but1" (click)='Color("#00ff00")' style="background-color: #00ff00;"></button>
+             <button class="but1" (click)='Color("#66ff99")' style="background-color: #66ff99;"></button>
+             <button class="but1" (click)='Color("#99ffcc")' style="background-color: #99ffcc;"></button>
+             <button class="but1" (click)='Color("#ccffff")' style="background-color: #ccffff;"></button>
+             <button class="but1" (click)='Color("#ccccff")' style="background-color: #ccccff;"></button>
+             <button class="but1" (click)='Color("#cc99ff")' style="background-color: #cc99ff;"></button>
+             <button class="but1" (click)='Color("#cc66ff")' style="background-color: #cc66ff;"></button>
+             <button class="but1" (click)='Color("#cc33ff")' style="background-color: #cc33ff;"></button>
+             <button class="but1" (click)='Color("#cc00ff")' style="background-color: #cc00ff;"></button>
+             <button class="but1" (click)='Color("#9900cc")' style="background-color: #9900cc;"></button>
+           </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#003300")' style="background-color: #003300;"></button>
+             <button class="but1" (click)='Color("#009933")' style="background-color: #009933;"></button>
+             <button class="but1" (click)='Color("#33cc33")' style="background-color: #33cc33;"></button>
+             <button class="but1" (click)='Color("#66ff66")' style="background-color: #66ff66;"></button>
+             <button class="but1" (click)='Color("#99ff99")' style="background-color: #99ff99;"></button>
+             <button class="but1" (click)='Color("#ccffcc")' style="background-color: #ccffcc;"></button>
+             <button class="but1" (click)='Color("Non")' style="background-color: #ffffff;"></button>
+             <button class="but1" (click)='Color("#ffccff")' style="background-color: #ffccff;"></button>
+             <button class="but1" (click)='Color("#ff99ff")' style="background-color: #ff99ff;"></button>
+             <button class="but1" (click)='Color("#ff66ff")' style="background-color: #ff66ff;"></button>
+             <button class="but1" (click)='Color("#ff00ff")' style="background-color: #ff00ff;"></button>
+             <button class="but1" (click)='Color("#cc00cc")' style="background-color: #cc00cc;"></button>
+             <button class="but1" (click)='Color("#660066")' style="background-color: #660066;"></button>
+           </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#336600")' style="background-color: #336600;"></button>
+             <button class="but1" (click)='Color("#009900")' style="background-color: #009900;"></button>
+             <button class="but1" (click)='Color("#66ff33")' style="background-color: #66ff33;"></button>
+             <button class="but1" (click)='Color("#99ff66")' style="background-color: #99ff66;"></button>
+             <button class="but1" (click)='Color("#ccff99")' style="background-color: #ccff99;"></button>
+             <button class="but1" (click)='Color("#ffffcc")' style="background-color: #ffffcc;"></button>
+             <button class="but1" (click)='Color("#ffcccc")' style="background-color: #ffcccc;"></button>
+             <button class="but1" (click)='Color("#ff99cc")' style="background-color: #ff99cc;"></button>
+             <button class="but1" (click)='Color("#ff66cc")' style="background-color: #ff66cc;"></button>
+             <button class="but1" (click)='Color("#ff33cc")' style="background-color: #ff33cc;"></button>
+             <button class="but1" (click)='Color("#cc0099")' style="background-color: #cc0099;"></button>
+             <button class="but1" (click)='Color("#993399")' style="background-color: #993399;"></button>
+           </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#333300")' style="background-color: #333300;"></button>
+             <button class="but1" (click)='Color("#669900")' style="background-color: #669900;"></button>
+             <button class="but1" (click)='Color("#99ff33")' style="background-color: #99ff33;"></button>
+             <button class="but1" (click)='Color("#ccff66")' style="background-color: #ccff66;"></button>
+             <button class="but1" (click)='Color("#ffff99")' style="background-color: #ffff99;"></button>
+             <button class="but1" (click)='Color("#ffcc99")' style="background-color: #ffcc99;"></button>
+             <button class="but1" (click)='Color("#ff9999")' style="background-color: #ff9999;"></button>
+             <button class="but1" (click)='Color("#ff6699")' style="background-color: #ff6699;"></button>
+             <button class="but1" (click)='Color("#ff3399")' style="background-color: #ff3399;"></button>
+             <button class="but1" (click)='Color("#cc3399")' style="background-color: #cc3399;"></button>
+             <button class="but1" (click)='Color("#000000")' style="background-color: #990099;"></button>
+           </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#666633")' style="background-color: #666633;"></button>
+             <button class="but1" (click)='Color("#99cc00")' style="background-color: #99cc00;"></button>
+             <button class="but1" (click)='Color("#ccff33")' style="background-color: #ccff33;"></button>
+             <button class="but1" (click)='Color("#ffff66")' style="background-color: #ffff66;"></button>
+             <button class="but1" (click)='Color("#ffcc66")' style="background-color: #ffcc66;"></button>
+             <button class="but1" (click)='Color("#ff9966")' style="background-color: #ff9966;"></button>
+             <button class="but1" (click)='Color("#ff6666")' style="background-color: #ff6666;"></button>
+             <button class="but1" (click)='Color("#ff0066")' style="background-color: #ff0066;"></button>
+             <button class="but1" (click)='Color("#cc6699")' style="background-color: #cc6699;"></button>
+             <button class="but1" (click)='Color("#993366")' style="background-color: #993366;"></button>
+           </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#999966")' style="background-color: #999966;"></button>
+             <button class="but1" (click)='Color("#cccc00")' style="background-color: #cccc00;"></button>
+             <button class="but1" (click)='Color("#ffff00")' style="background-color: #ffff00;"></button>
+             <button class="but1" (click)='Color("#ffcc00")' style="background-color: #ffcc00;"></button>
+             <button class="but1" (click)='Color("#ff9933")' style="background-color: #ff9933;"></button>
+             <button class="but1" (click)='Color("#ff6600")' style="background-color: #ff6600;"></button>
+             <button class="but1" (click)='Color("#ff5050")' style="background-color: #ff5050;"></button>
+             <button class="but1" (click)='Color("#cc0066")' style="background-color: #cc0066;"></button>
+             <button class="but1" (click)='Color("#660033")' style="background-color: #660033;"></button>
+           </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#996633")' style="background-color: #996633;"></button>
+             <button class="but1" (click)='Color("#cc9900")' style="background-color: #cc9900;"></button>
+             <button class="but1" (click)='Color("#ff9900")' style="background-color: #ff9900;"></button>
+             <button class="but1" (click)='Color("#cc6600")' style="background-color: #cc6600;"></button>
+             <button class="but1" (click)='Color("#ff3300")' style="background-color: #ff3300;"></button>
+             <button class="but1" (click)='Color("#ff0000")' style="background-color: #ff0000;"></button>
+             <button class="but1" (click)='Color("#cc0000")' style="background-color: #cc0000;"></button>
+             <button class="but1" (click)='Color("#990033")' style="background-color: #990033;"></button>
+           </div>
+
+           <div class="test">
+             <button class="but1" (click)='Color("#663300")' style="background-color: #663300;"></button>
+             <button class="but1" (click)='Color("#996600")' style="background-color: #996600;"></button>
+             <button class="but1" (click)='Color("#cc3300")' style="background-color: #cc3300;"></button>
+             <button class="but1" (click)='Color("#993300")' style="background-color: #993300;"></button>
+             <button class="but1" (click)='Color("#990000")' style="background-color: #990000;"></button>
+             <button class="but1" (click)='Color("#993333")' style="background-color: #993333;"></button>
+             <button class="but1" (click)='Color("#000000")' style="background-color: #000000;"></button>
+           </div>
+
+       </div>
+     </div>
+
+
+</body>
+</html>
